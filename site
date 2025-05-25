@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade Plumbing Laval - Services de Plomberie Professionnels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .emergency-banner {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+        
+        .map-container {
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Top Banner -->
+    <div class="bg-blue-600 text-white py-2 px-4 text-center">
+        <p class="text-sm md:text-base"><i class="fas fa-phone-alt mr-2"></i> Service d'urgence disponible 24/7 - Appelez maintenant: <a href="tel:4502339731" class="font-bold">(450) 233-9731</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-tint text-blue-600 text-3xl mr-2"></i>
+                        <span class="text-2xl font-bold text-blue-800">Cascade Plumbing</span>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-blue-800 font-medium hover:text-blue-600 transition">Accueil</a>
+                    <a href="#services" class="text-gray-700 font-medium hover:text-blue-600 transition">Services</a>
+                    <a href="#about" class="text-gray-700 font-medium hover:text-blue-600 transition">À propos</a>
+                    <a href="#testimonials" class="text-gray-700 font-medium hover:text-blue-600 transition">Témoignages</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu bg-white shadow-lg">
+            <div class="px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="block py-2 text-blue-800 font-medium hover:text-blue-600 transition">Accueil</a>
+                <a href="#services" class="block py-2 text-gray-700 font-medium hover:text-blue-600 transition">Services</a>
+                <a href="#about" class="block py-2 text-gray-700 font-medium hover:text-blue-600 transition">À propos</a>
+                <a href="#testimonials" class="block py-2 text-gray-700 font-medium hover:text-blue-600 transition">Témoignages</a>
+                <a href="#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Services de Plomberie Professionnels à Laval</h1>
+            <p class="text-xl md:text-2xl mb-8">Des solutions de plomberie fiables, efficaces et abordables pour votre maison ou entreprise</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:4502339731" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone-alt mr-2"></i> Appelez maintenant
+                </a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i> Demander un devis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner bg-red-600 text-white py-4 px-6 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center justify-center mb-2 md:mb-0">
+                <i class="fas fa-exclamation-triangle text-2xl mr-3"></i>
+                <p class="font-bold text-lg">Service d'urgence de plomberie disponible 24/7</p>
+            </div>
+            <a href="tel:4502339731" class="bg-white text-red-600 font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition flex items-center">
+                <i class="fas fa-phone-alt mr-2"></i> (450) 233-9731
+            </a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Nos Services de Plomberie</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous offrons des solutions complètes de plomberie pour les propriétés résidentielles et commerciales à Laval et ses environs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-faucet text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Réparation et Installation de Tuyaux</h3>
+                        <p class="text-gray-600 mb-4">Services experts de réparation et d'installation de tuyaux pour prévenir les fuites et les dommages causés par l'eau.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-toilet text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Réparation et Installation de Toilettes</h3>
+                        <p class="text-gray-600 mb-4">Services professionnels de toilettes incluant réparations, remplacements et nouvelles installations.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-shower text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Services de Chauffage d'Eau</h3>
+                        <p class="text-gray-600 mb-4">Installation, réparation et entretien de tous types de chauffe-eau pour un approvisionnement constant en eau chaude.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-bath text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Nettoyage de Drain</h3>
+                        <p class="text-gray-600 mb-4">Solutions avancées de nettoyage de drains pour éliminer les obstructions et prévenir les blocages futurs.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-sink text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Plomberie de Cuisine</h3>
+                        <p class="text-gray-600 mb-4">Services complets de plomberie de cuisine incluant installation d'évier, broyeur à déchets et plus.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-tools text-blue-600 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Plomberie d'Urgence</h3>
+                        <p class="text-gray-600 mb-4">Services d'urgence de plomberie 24/7 pour résoudre les problèmes urgents comme les tuyaux éclatés et les fuites sévères.</p>
+                        <a href="tel:4502339731" class="text-blue-600 font-medium hover:text-blue-800 transition flex items-center">
+                            Appelez maintenant <i class="fas fa-phone-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plombier au travail" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">À propos de Cascade Plumbing Laval</h2>
+                    <p class="text-gray-600 mb-4">Cascade Plumbing Laval sert la communauté avec des services de plomberie de qualité supérieure depuis plus de 15 ans. Notre équipe de plombiers licenciés et expérimentés s'engage à fournir un service exceptionnel avec honnêteté et intégrité.</p>
+                    <p class="text-gray-600 mb-6">Nous sommes fiers de notre savoir-faire et garantissons chaque travail que nous accomplissons. Qu'il s'agisse d'une simple réparation de robinet ou d'une installation complexe de système de plomberie, nous traitons chaque projet avec le même niveau de professionnalisme et d'attention aux détails.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Licencié et Assuré</h4>
+                                <p class="text-gray-600 text-sm">Tous nos plombiers sont pleinement licenciés et assurés pour votre protection.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Service Rapide</h4>
+                                <p class="text-gray-600 text-sm">Nous respectons votre temps et arrivons à l'heure pour tous les rendez-vous programmés.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-dollar-sign text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Prix Équitables</h4>
+                                <p class="text-gray-600 text-sm">Tarification transparente sans frais cachés ni surprises.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-thumbs-up text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Satisfaction Garantie</h4>
+                                <p class="text-gray-600 text-sm">Nous garantissons votre satisfaction quant à notre savoir-faire et notre service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition">
+                        <i class="fas fa-info-circle mr-2"></i> En savoir plus sur nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Ce que disent nos clients</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ne prenez pas seulement notre parole - écoutez nos clients satisfaits de Laval.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Cascade Plumbing nous a sauvés d'un désastre majeur lorsque notre chauffe-eau a éclaté. Ils sont arrivés dans les 30 minutes suivant notre appel et ont rapidement maîtrisé la situation. Professionnels, courtois et à prix raisonnable."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Jean Dupont</h4>
+                            <p class="text-gray-500 text-sm">Laval, QC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"J'ai utilisé Cascade Plumbing pour plusieurs projets dans ma maison et ils ne m'ont jamais déçue. Leurs techniciens sont compétents, propres et respectueux de ma maison. Je les recommande à tous mes amis et ma famille."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">MT</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Marie Tremblay</h4>
+                            <p class="text-gray-500 text-sm">Laval, QC</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"En tant que gestionnaire de propriétés, je compte sur Cascade Plumbing pour toute la maintenance de nos bâtiments. Ils répondent rapidement, fournissent des estimations précises et terminent les travaux à temps. Leur service d'urgence est une bouée de sauvetage!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">AG</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">André Gagnon</h4>
+                            <p class="text-gray-500 text-sm">Laval, QC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contactez Cascade Plumbing Laval</h2>
+                <p class="max-w-2xl mx-auto">Prêt à programmer un service ou avez-vous des questions? Contactez-nous dès aujourd'hui!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Votre Nom</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-blue-300" placeholder="Jean Dupont">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Adresse Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-blue-300" placeholder="jean@exemple.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2 font-medium">Numéro de Téléphone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-blue-300" placeholder="(450) 555-1234">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-2 font-medium">Service Requis</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-white">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="pipe-repair">Réparation/Installation de Tuyaux</option>
+                                <option value="toilet">Services de Toilettes</option>
+                                <option value="water-heater">Services de Chauffe-Eau</option>
+                                <option value="drain">Nettoyage de Drain</option>
+                                <option value="kitchen">Plomberie de Cuisine</option>
+                                <option value="emergency">Service d'Urgence</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-blue-300" placeholder="Décrivez vos besoins en plomberie..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">
+                            Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-blue-700 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Notre Adresse</h4>
+                                    <p class="text-blue-200">2994 Bd Dagenais O, Laval, QC H7P 1T1</p>
+                                    <div class="map-container mt-4">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.103041764937!2d-73.7681283235436!3d45.54296397107725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9229a0a52a3a3%3A0x8d2a1a0e7e5e91b5!2s2994%20Bd%20Dagenais%20O%2C%20Laval%2C%20QC%20H7P%201T1!5e0!3m2!1sen!2sca!4v1719361234567!5m2!1sen!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Numéro de Téléphone</h4>
+                                    <a href="tel:4502339731" class="text-white hover:underline">(450) 233-9731</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Heures d'Ouverture</h4>
+                                    <p class="text-blue-200">Lundi - Vendredi: 8h00 - 18h00</p>
+                                    <p class="text-blue-200">Samedi: 9h00 - 16h00</p>
+                                    <p class="text-blue-200">Service d'urgence disponible 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tint text-blue-400 text-3xl mr-2"></i>
+                        <span class="text-2xl font-bold">Cascade Plumbing</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Vos experts en plomberie de confiance à Laval, offrant des services fiables et professionnels depuis plus de 15 ans.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Témoignages</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contactez-nous</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-2"></i>
+                            <a href="tel:4502339731" class="text-gray-400 hover:text-white transition">(450) 233-9731</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                            <a href="mailto:info@cascadeplumbinglaval.com" class="text-gray-400 hover:text-white transition">info@cascadeplumbinglaval.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
+                            <span class="text-gray-400">2994 Bd Dagenais O, Laval, QC H7P 1T1</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6">
+                        <a href="tel:4502339731" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition">
+                            <i class="fas fa-phone-alt mr-2"></i> Appelez maintenant
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Cascade Plumbing Laval. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="tel:4502339731" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center transition transform hover:scale-110">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contact
